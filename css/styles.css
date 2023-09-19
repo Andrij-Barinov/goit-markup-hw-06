@@ -206,6 +206,18 @@ img {
   gap: 40px;
 }
 
+@media only screen and (max-width: 768px) {
+  .header-nav-list {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-btn {
+    display: none;
+  }
+}
+
 .header-nav-link {
   display: block;
   padding-top: 24px;
@@ -217,6 +229,12 @@ img {
   display: flex;
   gap: 40px;
   align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .header-address-list {
+    display: none;
+  }
 }
 
 .header-nav-item {
@@ -930,6 +948,7 @@ img {
   .portfolio-list {
     column-gap: 16px;
     row-gap: 72px;
+    justify-content: flex-start;
   }
 }
 
@@ -938,6 +957,7 @@ img {
   .portfolio-list {
     column-gap: 23px;
     row-gap: 48px;
+    justify-content: flex-start;
   }
 }
 
