@@ -840,10 +840,37 @@ img {
 */
 .filter-list {
   display: flex;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 16px;
   justify-content: center;
-  margin-bottom: 72px;
-  margin-top: 100px;
+  margin-bottom: 48px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Styles for tablet devices */
+@media only screen and (min-width: 768px) {
+  .filter-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .filter-list {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+/* Styles for desktop devices */
+@media only screen and (min-width: 1158px) {
+  .filter-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .filter-list {
+    margin-top: 100px;
+    margin-bottom: 72px;
+  }
 }
 
 .filter-btn {
@@ -885,8 +912,7 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 24px;
+  justify-content: center;
   row-gap: 48px;
 }
 
@@ -896,7 +922,23 @@ img {
 }
 
 .portfolio-item {
-  flex-basis: calc((100% - 24px * 2) / 3);
+  flex-basis: auto;
+}
+
+/* Styles for tablet devices */
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    column-gap: 16px;
+    row-gap: 72px;
+  }
+}
+
+/* Styles for desktop devices */
+@media only screen and (min-width: 1158px) {
+  .portfolio-list {
+    column-gap: 23px;
+    row-gap: 48px;
+  }
 }
 
 .portfolio-link:focus,
