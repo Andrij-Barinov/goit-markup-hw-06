@@ -1254,3 +1254,130 @@ img {
 .footer-airplane-icon {
   margin-left: 16px;
 }
+
+/**
+  |============================
+  | Mobile menu
+  |============================
+*/
+.mobile-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}
+.mobile-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transition-delay: 0ms;
+}
+
+.mobile-container {
+  padding: 80px 35px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+}
+
+.mobile-menu-btn {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  fill: var(--dark-color);
+  transition: background-color var(--transition-fast);
+  border: var(--transition-fast);
+}
+
+.modal-btn-icon {
+  transition: fill var(--transition-fast);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--pressed-state-color);
+  border: none;
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: var(--subtle-text-color);
+}
+
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu-link {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  color: var(--dark-color);
+  letter-spacing: -0.02em;
+}
+@media not (hover: hover) {
+  .mobile-menu-link:active {
+    color: var(--pressed-state-color);
+  }
+}
+
+.mobile-tel-link {
+  color: var(--dark-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+@media not (hover: hover) {
+  .mobile-tel-link:active {
+    color: var(--pressed-state-color);
+  }
+}
+
+.mobile-contacts-item {
+  margin-bottom: 40px;
+}
+
+.mobile-email-link {
+  color: var(--dark-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+@media not (hover: hover) {
+  .mobile-email-link:active {
+    color: var(--pressed-state-color);
+  }
+}
+
+.mobile-contacts {
+  margin-top: auto;
+}
+
+.hamburger-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  margin-top: 48px;
+}
