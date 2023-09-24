@@ -313,6 +313,18 @@ img {
   padding: 112px 0;
 }
 
+@media only screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg@2x.jpg);
+  }
+}
+
 /* Styles for desktop devices */
 @media only screen and (min-width: 1158px) {
   .hero {
